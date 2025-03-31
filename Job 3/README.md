@@ -43,11 +43,11 @@ cd /home/user/hello-docker
 # Créer le conteneur le nommer "hello-docker" à partir du Dockerfile dans le fichier où vous êtes.
 sudo docker build -t hello-docker .
 ```
-Réponse :
+Réponse :  
 ![alt text](image.png)
 ## Lancer le conteneur
 ```
 sudo docker run hello-docker
 ```
-Réponse :
+Réponse :  
 ![alt text](image-1.png)
