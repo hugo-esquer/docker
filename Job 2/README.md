@@ -14,6 +14,7 @@ sudo docker run hello-world
 - docker restart <container_id> → Redémarre un conteneur.
 - docker rm <container_id> → Supprime un conteneur.
 - docker logs <container_id> → Affiche les logs d’un conteneur.
+- docker run -it --rm <image> </bin/bash> → Lancer une image en mode interactif avec un shell bash (ajuster en fonction du shell)
 
 ### Gestion des images
 - docker images → Liste les images locales.
