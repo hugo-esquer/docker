@@ -23,8 +23,9 @@ sudo docker pull localhost:5000/mon-image:latest
 ### Utiliser Docker Registry UI
 On utilisera un projet open-source comme docker-registry-ui :
 ```
-sudo docker run -d -p 8880:80 --name registry-ui --link registry -e REGISTRY_URL=http://registry:5000 joxit/docker-registry-ui:latest
+sudo docker run -d -p 8888:80 --name registry-ui --link registry -e REGISTRY_URL=http://ADDRESS_DU_HOST:5000 joxit/docker-registry-ui:latest
 ```
+---
 # Finalement on peut faire un docker compose
 Le docker compose permet de déployer les deux conteneurs sur le même réseau et de les configurer en même temps.
 ## Docker-compose.yml

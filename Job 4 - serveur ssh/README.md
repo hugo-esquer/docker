@@ -23,6 +23,7 @@ EXPOSE 22
 # Lancer SSHD au démarrage du conteneur
 CMD ["/usr/sbin/sshd", "-D"]
 ```
+---
 ### Explications
 
 ```dockerfile

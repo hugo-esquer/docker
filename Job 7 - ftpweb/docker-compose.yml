@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    images: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - site_web:/usr/share/nginx/html
+
+  ftp:
+    image: fauria/vsftpd
+    ports:
+      - "21:21"
+      - "20:20"
+      - "21100-21110:21100-21110"
+    volumes:
+      - site_web:/home/vsftpd/ftpuser
+    environement:
+      - FTP-USER=ftpuser
+      - FTP_PASS=monpassword
+      - PASV_ADDRESS=HostAddress
+      - PASV_MIN_PORT=21100
+      - PASV_MAX_PORT=21110
+volumes:
+  site_web:
+    name: ftpweb
