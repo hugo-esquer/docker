@@ -17,8 +17,8 @@ RUN apk add --no-cache openssh \
     && apk cache clean \
     && echo 'root:root123' | chpasswd
 
-# Exposer le port SSH 22
-EXPOSE 22
+# Exposer le port SSH 2222 le port 22 est deja attibuer au ssh de la machine
+EXPOSE 2222
 
 # Lancer SSHD au démarrage du conteneur
 CMD ["/usr/sbin/sshd", "-D"]
